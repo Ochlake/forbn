@@ -75,6 +75,32 @@
         });
     });
 </script>
+<script>
+    // Get modal
+    const modal = document.getElementById("musicModal");
+    // Get button that opens the modal
+    const btn = document.getElementById("openModal");
+    // Get the <span> element that closes the modal
+    const span = document.getElementsByClassName("close")[0];
+
+    // Open the modal
+    btn.onclick = function() {
+        modal.style.display = "flex";
+    }
+
+    // Close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close the modal if clicked outside the content
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+    
     
 </body>
 </html>
