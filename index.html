@@ -50,5 +50,18 @@
             <li><a href="https://www.threads.net/@ochlake.a" target="_blank">Threads</a></li>
         </ul>
     </footer>
+<script>
+    // Smooth Scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+    
 </body>
 </html>
