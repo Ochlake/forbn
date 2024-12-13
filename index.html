@@ -3,121 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Forbn Ochlake - Musician</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Forbn Ochlake</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Background Image -->
+    <div class="background"></div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Forbn Ochlake's Music World</h1>
-            <p>Explore my journey and latest tracks!</p>
-            <a href="#music" class="btn">Listen Now</a>
-        </div>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <h1>Welcome to Forbn Ochlake's World</h1>
+        <p>Musician | Artist | Creator</p>
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="section">
         <h2>About Me</h2>
-        <p>I’m Forbn Ochlake, a passionate musician and artist. I blend different genres to create a unique sound. Explore my music and get to know my story.</p>
+        <p>
+            Forbn Ochlake is a passionate musician and artist who creates soulful music
+            to inspire and connect with people around the world.
+        </p>
     </section>
 
     <!-- Music Section -->
-    <section id="music">
-    <h2>My Latest Tracks</h2>
-    <button id="openModal">Play Music</button>
-
-    <!-- Modal for Music Player -->
-    <div id="musicModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Now Playing</h3>
-            <!-- Embed SoundCloud Player -->
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-                src="https://w.soundcloud.com/player/?url=https%3A//on.soundcloud.com/gLShL&color=%23ff6600&auto_play=true">
-            </iframe>
-        </div>
-    </div>
+    <section id="music" class="section">
+        <h2>My Music</h2>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//on.soundcloud.com/gLShL&color=%23ff6600&auto_play=false">
+        </iframe>
     </section>
-    
-    <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+    <!-- Login Section -->
+    <section id="login" class="section">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send Message</button>
-    </form>
-                                                  </section>
-    
-    
-
-    <!-- Social Links -->
-    <footer>
-        <ul class="social-links">
-            <li><a href="https://www.instagram.com/ochlake.a" target="_blank">Instagram</a></li>
-            <li><a href="https://x.com/ochlake" target="_blank">Twitter</a></li>
-            <li><a href="https://www.threads.net/@ochlake.a" target="_blank">Threads</a></li>
-        </ul>
-    </footer>
-<script>
-    // Smooth Scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+    <script>
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
-</script>
-<script>
-    // Get modal
-    const modal = document.getElementById("musicModal");
-    // Get button that opens the modal
-    const btn = document.getElementById("openModal");
-    // Get the <span> element that closes the modal
-    const span = document.getElementsByClassName("close")[0];
-
-    // Open the modal
-    btn.onclick = function() {
-        modal.style.display = "flex";
-    }
-
-    // Close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // Close the modal if clicked outside the content
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-    
-    
+    </script>
 </body>
 </html>
