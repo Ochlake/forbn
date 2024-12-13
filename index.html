@@ -7,56 +7,58 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Background Image -->
+    <!-- Full-Page Background -->
     <div class="background"></div>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#music">Music</a></li>
-            <li><a href="#login">Login</a></li>
-        </ul>
-    </nav>
+    <!-- Content Overlay -->
+    <div class="overlay">
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="section">
-        <h1>Welcome to Forbn Ochlake's World</h1>
-        <p>Musician | Artist | Creator</p>
-    </section>
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <h1>Welcome to Forbn Ochlake's World</h1>
+            <p>Musician | Artist | Creator</p>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>
-            Forbn Ochlake is a passionate musician and artist who creates soulful music
-            to inspire and connect with people around the world.
-        </p>
-    </section>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>
+                I am a passionate musician and artist creating soulful music to inspire and connect with people worldwide.
+            </p>
+        </section>
 
-    <!-- Music Section -->
-    <section id="music" class="section">
-        <h2>My Music</h2>
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//on.soundcloud.com/gLShL&color=%23ff6600&auto_play=false">
-        </iframe>
-    </section>
+        <!-- Music Section -->
+        <section id="music" class="section">
+            <h2>My Music</h2>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//on.soundcloud.com/gLShL&color=%23ff6600&auto_play=false">
+            </iframe>
+        </section>
 
-    <!-- Login Section -->
-    <section id="login" class="section">
-        <h2>Login</h2>
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Login</button>
-        </form>
-    </section>
+        <!-- Login Section -->
+        <section id="login" class="section">
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </div>
 
     <script>
-        // Smooth Scroll
+        // Smooth Scroll for Navigation Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -67,4 +69,5 @@
         });
     </script>
 </body>
-</html>
+                    </html>
+                    
